@@ -44,8 +44,6 @@
             this.pnlpost = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtStatus = new System.Windows.Forms.ComboBox();
-            this.txtGender = new System.Windows.Forms.ComboBox();
             this.txtuserid = new System.Windows.Forms.TextBox();
             this.lbluserid = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -56,6 +54,8 @@
             this.getbyName = new System.Windows.Forms.Button();
             this.txtbyname = new System.Windows.Forms.TextBox();
             this.txtSearchName = new System.Windows.Forms.Label();
+            this.txtgender = new System.Windows.Forms.TextBox();
+            this.txtstatus = new System.Windows.Forms.TextBox();
             this.pnlpost.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -181,9 +181,9 @@
             // 
             this.pnlpost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pnlpost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlpost.Controls.Add(this.txtgender);
+            this.pnlpost.Controls.Add(this.txtstatus);
             this.pnlpost.Controls.Add(this.panel3);
-            this.pnlpost.Controls.Add(this.txtStatus);
-            this.pnlpost.Controls.Add(this.txtGender);
             this.pnlpost.Controls.Add(this.txtuserid);
             this.pnlpost.Controls.Add(this.lbluserid);
             this.pnlpost.Controls.Add(this.lblName);
@@ -219,22 +219,6 @@
             this.label3.Size = new System.Drawing.Size(127, 20);
             this.label3.TabIndex = 17;
             this.label3.Text = "Search User List";
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.FormattingEnabled = true;
-            this.txtStatus.Location = new System.Drawing.Point(371, 124);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(214, 28);
-            this.txtStatus.TabIndex = 20;
-            // 
-            // txtGender
-            // 
-            this.txtGender.FormattingEnabled = true;
-            this.txtGender.Location = new System.Drawing.Point(371, 86);
-            this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(214, 28);
-            this.txtGender.TabIndex = 19;
             // 
             // txtuserid
             // 
@@ -335,6 +319,20 @@
             this.txtSearchName.TabIndex = 0;
             this.txtSearchName.Text = "Enter Name";
             // 
+            // txtgender
+            // 
+            this.txtgender.Location = new System.Drawing.Point(371, 88);
+            this.txtgender.Name = "txtgender";
+            this.txtgender.Size = new System.Drawing.Size(214, 26);
+            this.txtgender.TabIndex = 18;
+            // 
+            // txtstatus
+            // 
+            this.txtstatus.Location = new System.Drawing.Point(371, 128);
+            this.txtstatus.Name = "txtstatus";
+            this.txtstatus.Size = new System.Drawing.Size(214, 26);
+            this.txtstatus.TabIndex = 19;
+            // 
             // User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -379,8 +377,6 @@
         private System.Windows.Forms.Label lblid;
         private System.Windows.Forms.TextBox txtuserid;
         private System.Windows.Forms.Label lbluserid;
-        private System.Windows.Forms.ComboBox txtStatus;
-        private System.Windows.Forms.ComboBox txtGender;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtbyname;
         private System.Windows.Forms.Label txtSearchName;
@@ -389,5 +385,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtgender;
+        private System.Windows.Forms.TextBox txtstatus;
     }
 }
