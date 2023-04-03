@@ -42,6 +42,8 @@
             this.btnSingleUser = new System.Windows.Forms.Button();
             this.txtid = new System.Windows.Forms.TextBox();
             this.pnlpost = new System.Windows.Forms.Panel();
+            this.txtgender = new System.Windows.Forms.TextBox();
+            this.txtstatus = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.txtuserid = new System.Windows.Forms.TextBox();
@@ -54,8 +56,7 @@
             this.getbyName = new System.Windows.Forms.Button();
             this.txtbyname = new System.Windows.Forms.TextBox();
             this.txtSearchName = new System.Windows.Forms.Label();
-            this.txtgender = new System.Windows.Forms.TextBox();
-            this.txtstatus = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.pnlpost.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -181,6 +182,7 @@
             // 
             this.pnlpost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pnlpost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlpost.Controls.Add(this.label4);
             this.pnlpost.Controls.Add(this.txtgender);
             this.pnlpost.Controls.Add(this.txtstatus);
             this.pnlpost.Controls.Add(this.panel3);
@@ -199,6 +201,20 @@
             this.pnlpost.Name = "pnlpost";
             this.pnlpost.Size = new System.Drawing.Size(1363, 209);
             this.pnlpost.TabIndex = 15;
+            // 
+            // txtgender
+            // 
+            this.txtgender.Location = new System.Drawing.Point(371, 88);
+            this.txtgender.Name = "txtgender";
+            this.txtgender.Size = new System.Drawing.Size(214, 26);
+            this.txtgender.TabIndex = 18;
+            // 
+            // txtstatus
+            // 
+            this.txtstatus.Location = new System.Drawing.Point(371, 128);
+            this.txtstatus.Name = "txtstatus";
+            this.txtstatus.Size = new System.Drawing.Size(214, 26);
+            this.txtstatus.TabIndex = 19;
             // 
             // panel3
             // 
@@ -319,19 +335,15 @@
             this.txtSearchName.TabIndex = 0;
             this.txtSearchName.Text = "Enter Name";
             // 
-            // txtgender
+            // label4
             // 
-            this.txtgender.Location = new System.Drawing.Point(371, 88);
-            this.txtgender.Name = "txtgender";
-            this.txtgender.Size = new System.Drawing.Size(214, 26);
-            this.txtgender.TabIndex = 18;
-            // 
-            // txtstatus
-            // 
-            this.txtstatus.Location = new System.Drawing.Point(371, 128);
-            this.txtstatus.Name = "txtstatus";
-            this.txtstatus.Size = new System.Drawing.Size(214, 26);
-            this.txtstatus.TabIndex = 19;
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Maroon;
+            this.label4.Location = new System.Drawing.Point(53, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(15, 20);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "*";
             // 
             // User
             // 
@@ -387,5 +399,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtgender;
         private System.Windows.Forms.TextBox txtstatus;
+        private System.Windows.Forms.Label label4;
     }
 }

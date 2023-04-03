@@ -29,14 +29,28 @@ namespace EMS
 
         private async void btnPost_Click(object sender, EventArgs e)
         {
-            var response = await userhelper.Post(txtName.Text,txtEmail.Text,txtgender.Text,txtstatus.Text);
-            txtresponse.Text = userhelper.beautifyJson(response);
+            if (txtName.Text != "" && (txtEmail.Text != "" || txtgender.Text !="" || txtstatus.Text !=""))
+            {
+                var response = await userhelper.Post(txtName.Text, txtEmail.Text, txtgender.Text, txtstatus.Text);
+                txtresponse.Text = userhelper.beautifyJson(response);
+            }
+            else
+            {
+                MessageBox.Show("please enter the details which you want to create.");
+            }
         }
 
         private async void btnSingleUser_Click(object sender, EventArgs e)
         {
-            var response = await userhelper.Get(txtid.Text);
-            txtresponse.Text = userhelper.beautifyJson(response);
+            if (txtid.Text != "")
+            {
+                var response = await userhelper.Get(txtid.Text);
+                txtresponse.Text = userhelper.beautifyJson(response);
+            }
+            else
+            {
+                MessageBox.Show("please enter the id.");
+            }
         }
 
         private async void btnPut_Click(object sender, EventArgs e)
@@ -48,20 +62,35 @@ namespace EMS
             }
             else
             {
-                MessageBox.Show("please enter the Id for which you want to update details.");
+                MessageBox.Show("please enter the details with Id for which you want to update details.");
             }
         }
 
         private async void btndelete_Click(object sender, EventArgs e)
         {
-            var response = await userhelper.Delete(txtid.Text);
-            txtresponse.Text = response;
+            if (txtid.Text != "")
+            {
+                var response = await userhelper.Delete(txtid.Text);
+                txtresponse.Text = response;
+            }
+            else
+            {
+                MessageBox.Show("please enter the Id for which you want to delete details.");
+            }
         }
 
         private async void getbyName_Click(object sender, EventArgs e)
         {
-            var response = await userhelper.GetByName(txtbyname.Text);
-            txtresponse.Text = userhelper.beautifyJson(response);
+            if (txtbyname.Text != "")
+            {
+                var response = await userhelper.GetByName(txtbyname.Text);
+                txtresponse.Text = userhelper.beautifyJson(response);
+            }
+            else
+            {
+                MessageBox.Show("please enter the name.");
+            }
+
         }
     }
 }

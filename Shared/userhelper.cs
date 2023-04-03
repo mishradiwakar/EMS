@@ -15,12 +15,13 @@ namespace EMS.Shared
     public static class userhelper
     {
         private static readonly string baseURL = "https://gorest.co.in/public/v2/";
-        
+        private static readonly string accessToken = "fa114107311259f5f33e70a5d85de34a2499b4401da069af0b1d835cd5ec0d56";
+
         public static async Task<string>GetAll()
         {
             using (HttpClient client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "fa114107311259f5f33e70a5d85de34a2499b4401da069af0b1d835cd5ec0d56");
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
                 using (HttpResponseMessage res = await client.GetAsync(baseURL + "users"))
                 {
                     using (HttpContent content = res.Content)
@@ -42,7 +43,7 @@ namespace EMS.Shared
         {
             using (HttpClient client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "fa114107311259f5f33e70a5d85de34a2499b4401da069af0b1d835cd5ec0d56");
+               client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
                 using (HttpResponseMessage res = await client.GetAsync(baseURL + "users/" + id))
                 {
                     using (HttpContent content = res.Content)
@@ -72,7 +73,7 @@ namespace EMS.Shared
             var input = new FormUrlEncodedContent(inputdata);
             using (HttpClient client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "fa114107311259f5f33e70a5d85de34a2499b4401da069af0b1d835cd5ec0d56");
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
                 using (HttpResponseMessage res = await client.PostAsync(baseURL + "users", input))
                 {
                    
@@ -106,7 +107,7 @@ namespace EMS.Shared
             var input = new FormUrlEncodedContent(inputdata);
             using (HttpClient client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "fa114107311259f5f33e70a5d85de34a2499b4401da069af0b1d835cd5ec0d56");
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
                 using (HttpResponseMessage res = await client.PutAsync(baseURL + "users/" + id, input))
                     {
                         using (HttpContent content = res.Content)
@@ -130,7 +131,7 @@ namespace EMS.Shared
         {
             using (HttpClient client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "fa114107311259f5f33e70a5d85de34a2499b4401da069af0b1d835cd5ec0d56");
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
                 using (HttpResponseMessage res = await client.DeleteAsync(baseURL + "users/" + id))
                 {
                     using (HttpContent content = res.Content)
@@ -153,7 +154,7 @@ namespace EMS.Shared
         {
             using (HttpClient client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "fa114107311259f5f33e70a5d85de34a2499b4401da069af0b1d835cd5ec0d56");
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
                 using (HttpResponseMessage res = await client.GetAsync(baseURL + "users?name="+name+""))
                 {
                     using (HttpContent content = res.Content)
